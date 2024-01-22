@@ -1,0 +1,61 @@
+1st program
+module mmm(a,b,c,d,f);
+input a;
+input b;
+input c;
+input d;
+output f;
+reg f;
+always@(a,b,c,d)
+begin
+f=(~b&d)|(~a&~d)|(a&d)|(~b&~c);
+end 
+endmodule
+
+2nd program
+module xxx(sum,cout,a,b,cin);
+output sum;
+output cout;
+input a;
+input b;
+input cin;
+wire w1,w2,w3,w4,w5,w6,w7,w8,w9,w10;
+not g1(w1,a);
+not g2(w2,b);
+not g3(w3,cin);
+and g4(w4,a,b,cin);
+and g5(w5,w1,w2,cin);
+and g6(w6,w1,b,w3);
+and g7(w7,a,w2,w3);
+and g8(w8,a,b);
+and g9(w9,b,cin);
+and g10(w10,a,cin);
+or g11(sum,w4,w5,w6,w7);
+or g12(cout,w8,w9,w10);
+endmodule
+
+3rd program
+module www(diff,borr,a,b,cin);
+output diff;
+output borr;
+input a;
+input b;
+input cin;
+wire w1,w2,w3,w4,w5,w6,w7,w8,w9,w10;
+not g1(w1,a);
+not g2(w2,b);
+not g3(w3,cin);
+and g4(w4,a,b,cin);
+and g5(w5,w1,w2,cin);
+and g6(w6,w1,b,w3);
+and g7(w7,a,w2,w3);
+and g8(w8,a,b);
+and g9(w9,b,cin);
+and g10(w10,a,cin);
+or g11(diff,w4,w5,w6,w7);
+or g12(borr,w8,w9,w10);
+endmodule
+
+
+
+

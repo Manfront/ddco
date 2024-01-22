@@ -1,0 +1,44 @@
+strutcural 
+module aaaa(a,b,c,d,e,y);
+input a;
+input b;
+input c;
+input d;
+input e;
+output y;
+wire y1,y2;
+and g1(y1,a,b);
+and g2(y2,c,d,e);
+or g3(y1,y2);
+endmodule
+
+
+data flow 
+module bbbb(a,b,c,d,e,y);
+input a;
+input b;
+input c;
+input d;
+input e;
+output y;
+wire y1,y2;
+assign y1=a&b;
+assign y2=c&d&e;
+assign y3=y1&y2;
+endmodule
+
+behavioral 
+module cccc(a,b,c,d,e,y);
+input a;
+input b;
+input c;
+input d;
+input e;
+output y;
+reg y;
+always@(a,b,c,d,e)
+begin
+y=(a&b)|(c&d&e);
+end
+endmodule
+

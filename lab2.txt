@@ -1,0 +1,32 @@
+full adder
+
+module fff(a,b,c,sum,cout);
+input a;
+input b;
+input c;
+output sum;
+output cout;
+reg sum,cout;
+always@(sum,cout)
+begin
+sum=a^b^c;
+cout=(a&b)|(b&c)|(a&c);
+end
+endmodule
+
+full subtractor
+
+module sss(a,b,c,diff,borrow);
+input a;
+input b;
+input c;
+output diff;
+output borrow;
+reg diff,borrow;
+always@(diff,borrow)
+begin
+diff=a^b^c;
+borrow=(~a&b)|(b&c)|(~a&c);
+end
+endmodule
+
